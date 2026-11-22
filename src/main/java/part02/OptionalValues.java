@@ -1,5 +1,6 @@
 package part02;
 
+import java.util.OptionalDouble;
 import java.util.stream.IntStream;
 
 /**
@@ -29,8 +30,8 @@ public class OptionalValues {
          * actual value if it is present, or an alternative value if the OptionalDouble
          * is empty.
          */
-
-        return -1; // TODO
+        OptionalDouble result = stream.average();
+        return result.orElse(0.0); // TODO
     }
 
     /**
@@ -41,6 +42,6 @@ public class OptionalValues {
      * @return the maximum value in the stream or 0 if the stream is empty
      */
     public int maximum(IntStream stream) {
-        return -1; // TODO: see the IntStream documentation
+        return stream.max().orElse(0); // TODO: see the IntStream documentation
     }
 }
